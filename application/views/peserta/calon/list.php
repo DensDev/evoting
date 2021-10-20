@@ -1,4 +1,5 @@
-<?php if($users->is_vote_calon == 0 ){?>
+<?php error_reporting(0);?>
+<?php if($hasil_calon->id_user == $id_user AND $hasil_calon->is_vote_calon != 1 ){?>
 	<table class="table table-bordered" id="example1">
  	<thead>
  		<tr>
@@ -13,7 +14,7 @@
  			<td><?php echo $no++;?></td>
  			<td><?php echo $calon->nama;?></td>
 			 <td>
-			 <a href="#" class="btn btn-info btn-xs"><i class="fa fa-check"></i> Vote</a>
+			 <a type="button" href="<?php echo base_url('peserta/calon/vote/'.$calon->id_calon)?>" class="btn btn-info btn-xs"><i class="fa fa-check" ></i> Vote</a>
 			 </td>
  		</tr>
  		<?php } ?>

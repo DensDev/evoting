@@ -103,6 +103,18 @@ class Calon extends CI_Controller {
 		$this->session->set_flashdata('sukses', 'Data Calon Berhasil dihapus');
 		redirect(base_url('admin/calon'),'refresh');
 	}
+
+	public function chart_calon() {
+		$id_user 		= $this->session->userdata('id_user');
+		$profile 		= $this->user_model->detail($id_user);
+
+        $data = [
+			'title' 		=> 'Hasil Voting Calon Ketua',
+			'profile'  		=> $profile,
+            'isi' 			=> "admin/calon/chart_calon",
+        ];
+		$this->load->view('admin/layout/wrapper', $data, FALSE);
+    }
 }
 
 /* End of file Kategori.php */

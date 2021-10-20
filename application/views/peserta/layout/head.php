@@ -44,5 +44,3 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-<script  src="<?php echo base_url()?>assets/ckeditor/ckeditor.js?>" type="text/javascript"></script>
-   <script src="<?php echo base_url()?>assets/ckeditor/samples/js/sample.js?>" type="text/javascript"></script>

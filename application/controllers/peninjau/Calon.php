@@ -27,6 +27,18 @@ class Calon extends CI_Controller {
 		$this->load->view('peninjau/layout/wrapper', $data, FALSE);
 	}
 
+	public function chart_calon() {
+		$id_user 		= $this->session->userdata('id_user');
+		$profile 		= $this->user_model->detail($id_user);
+
+        $data = [
+			'title' 		=> 'Hasil Voting Calon Ketua',
+			'profile'  		=> $profile,
+            'isi' => "peserta/calon/chart_calon",
+        ];
+		$this->load->view('peserta/layout/wrapper', $data, FALSE);
+    }
+
 	
 }
 

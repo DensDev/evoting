@@ -14,7 +14,7 @@
         <!-- menu produk -->
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-cubes"></i> <span>Pemilihan</span>
+            <i class="fa fa-check"></i> <span>Pemilihan</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -22,6 +22,18 @@
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url('admin/balon')?>"><i class="fa fa-user-plus"></i> Data Bakal Calon Ketua</a></li>
             <li><a href="<?php echo base_url('admin/calon')?>"><i class="fa fa-user-plus"></i> Data Calon Ketua</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-cubes"></i> <span>hasil Pemilihan</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url('admin/balon/chart_balon')?>"><i class="fa fa-bar-chart"></i> Hasil Voting Bakal Calon Ketua</a></li>
+            <li><a href="<?php echo base_url('admin/calon/chart_calon')?>"><i class="fa fa-bar-chart"></i> Hasil Voting Calon Ketua</a></li>
           </ul>
         </li>
         <!-- end menu user -->

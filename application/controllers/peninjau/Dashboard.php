@@ -15,13 +15,26 @@ class Dashboard extends CI_Controller {
 	{
 		$id_user 		= $this->session->userdata('id_user');
 		$profile 		= $this->user_model->detail($id_user);
-		$data = array('title' 	=> 'Dashboard',
+		$total_peserta        = $this->user_model->total_peserta();
+		$total_peninjau        = $this->user_model->total_peninjau();
+
+		$data = array('title' 	=> 'Dashboard Peninjau',
 					  'profile'	=>	$profile,
+					  'total_peserta'	=>	$total_peserta,
+					  'total_peninjau'	=>	$total_peninjau,
 					  'isi'   	=> 'peninjau/dashboard/list'
 
 			);
 		$this->load->view('peninjau/layout/wrapper', $data, FALSE);
 	}
+
+	
+	public function chart() {
+        $data = [
+            'isi' => "peninjau/dashboard/list",
+        ];
+		$this->load->view('peninjau/layout/wrapper', $data, FALSE);
+    }
 
 }
 

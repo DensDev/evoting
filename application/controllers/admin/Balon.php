@@ -103,6 +103,18 @@ class Balon extends CI_Controller {
 		$this->session->set_flashdata('sukses', 'Data Bakal Calon Berhasil dihapus');
 		redirect(base_url('admin/balon'),'refresh');
 	}
+
+	public function chart_balon() {
+		$id_user 		= $this->session->userdata('id_user');
+		$profile 		= $this->user_model->detail($id_user);
+
+        $data = [
+			'title' 		=> 'Hasil Voting Bakal Calon Ketua',
+			'profile'  		=> $profile,
+            'isi' => "admin/balon/chart_balon",
+        ];
+		$this->load->view('admiin/layout/wrapper', $data, FALSE);
+    }
 }
 
 /* End of file Kategori.php */

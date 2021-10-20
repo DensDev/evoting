@@ -27,6 +27,18 @@ class Balon extends CI_Controller {
 		$this->load->view('peninjau/layout/wrapper', $data, FALSE);
 	}
 
+	public function chart_balon() {
+		$id_user 		= $this->session->userdata('id_user');
+		$profile 		= $this->user_model->detail($id_user);
+
+        $data = [
+			'title' 		=> 'Hasil Voting Bakal Calon Ketua',
+			'profile'  		=> $profile,
+            'isi' => "peserta/balon/chart_balon",
+        ];
+		$this->load->view('peserta/layout/wrapper', $data, FALSE);
+    }
+
 	
 }
 
