@@ -1,5 +1,5 @@
 <p>
-	<a href="<?php echo base_url('admin/user/add')?>" class="btn btn-success btn-lg"><i class="fa fa-plus"></i> Add User</a>
+	<a href="<?php echo base_url('admin/user/add')?>" class="btn btn-success btn-lg"><i class="fa fa-plus"></i> Tambah Peserta & Peninjau</a>
 </p>
 
 <?php 

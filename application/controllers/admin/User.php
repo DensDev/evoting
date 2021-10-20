@@ -18,7 +18,7 @@ class User extends CI_Controller {
 		$id_user 		= $this->session->userdata('id_user');
 		$profile 			= $this->user_model->detail($id_user);
 		$user = $this->user_model->listing();
-		$data =array('title' => 'Data Users',
+		$data =array('title' => 'Data Peserta & Peninjau',
 					 'user'  => $user,
 					 'profile'=> $profile,
 					 'isi'   => 'admin/user/list'

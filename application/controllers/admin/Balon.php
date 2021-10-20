@@ -113,7 +113,7 @@ class Balon extends CI_Controller {
 			'profile'  		=> $profile,
             'isi' => "admin/balon/chart_balon",
         ];
-		$this->load->view('admiin/layout/wrapper', $data, FALSE);
+		$this->load->view('admin/layout/wrapper', $data, FALSE);
     }
 }
 
